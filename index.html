@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[PLUMBER NAME] | Expert Plumber &amp; Gas Engineer in [TOWN/CITY]</title>
+  <meta name="description" content="[PLUMBER NAME] – Gas Safe registered plumber in [TOWN/CITY]. Boiler installations, emergency callouts, bathroom fitting &amp; more. Free quotes. Call [PHONE].">
+  <meta name="keywords" content="plumber [town], emergency plumber [town], boiler installation [town], gas engineer [town], bathroom fitting [town], heating engineer [town]">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://[YOURDOMAIN].co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[PLUMBER NAME] | Expert Plumber in [TOWN/CITY]">
+  <meta property="og:description" content="Gas Safe registered plumber. Free quotes. Emergency callouts. Serving [TOWN/CITY].">
+  <meta property="og:url" content="https://[YOURDOMAIN].co.uk/">
+  <meta property="og:image" content="https://[YOURDOMAIN].co.uk/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="geo.region" content="GB">
+  <meta name="geo.placename" content="[TOWN/CITY]">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Plumber",
+    "name":"[PLUMBER NAME] Plumbing & Heating","url":"https://[YOURDOMAIN].co.uk",
+    "telephone":"[PHONE]","email":"[EMAIL]",
+    "description":"Gas Safe registered plumber in [TOWN/CITY] and surrounding areas.",
+    "address":{"@type":"PostalAddress","addressLocality":"[TOWN/CITY]","addressCountry":"GB"},
+    "priceRange":"££","areaServed":"[TOWN/CITY] and surrounding areas",
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"87"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HERO ── */
+    .hero {
+      position: relative; background: var(--navy);
+      min-height: 88vh; display: flex; align-items: center;
+      overflow: hidden; padding: 80px 0 160px;
+    }
+    .hero__bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80') center/cover;
+      opacity: .15;
+    }
+    .hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(10,22,40,.95) 45%, rgba(10,22,40,.3));
+    }
+    .hero__accent {
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 5px; background: var(--accent);
+    }
+    .hero__content { position: relative; z-index: 2; max-width: 640px; }
+    .hero__eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: .75rem; text-transform: uppercase; letter-spacing: .2em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero__eyebrow::before {
+      content: ''; display: block; width: 28px; height: 2px; background: var(--accent);
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 6.5vw, 5.6rem);
+      color: var(--white); margin-bottom: 22px;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; display: block; }
+    .hero__sub {
+      font-size: 1.1rem; color: rgba(255,255,255,.7);
+      max-width: 500px; margin-bottom: 36px; font-weight: 500; line-height: 1.65;
+    }
+    .hero__btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    /* Stats row — FIXED layout */
+    .hero__stats {
+      display: flex; gap: 0;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius); overflow: hidden;
+      max-width: 520px;
+      backdrop-filter: blur(10px);
+    }
+    .hero__stat {
+      flex: 1; padding: 20px 16px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,.1);
+    }
+    .hero__stat:last-child { border-right: none; }
+    .hero__stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem; line-height: 1;
+      color: var(--accent); letter-spacing: .04em;
+      display: block; margin-bottom: 4px;
+    }
+    .hero__stat-label {
+      font-family: 'Barlow', sans-serif; font-weight: 600;
+      font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.55); display: block;
+    }
+
+    /* Badge strip at bottom of hero */
+    .hero__strip {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(255,255,255,.04);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .hero__strip-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 36px; padding: 16px 24px; flex-wrap: wrap;
+    }
+    .hero__badge {
+      display: flex; align-items: center; gap: 7px;
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: .78rem; text-transform: uppercase; letter-spacing: .08em;
+      color: rgba(255,255,255,.65);
+    }
+
+    /* ── TRUST BAR ── */
+    .trust { background: var(--sky); padding: 16px 0; }
+    .trust__inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 32px; flex-wrap: wrap;
+    }
+    .trust__item {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--white);
+    }
+
+    /* ── SERVICES GRID ── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 22px; margin-top: 52px;
+    }
+    .card--emergency {
+      background: var(--red); border-color: var(--red);
+    }
+    .card--emergency::before { background: rgba(255,255,255,.4); }
+    .card--emergency h3 { color: var(--white); }
+    .card--emergency p  { color: rgba(255,255,255,.8); }
+    .card--emergency .card__icon { background: rgba(255,255,255,.15); }
+    .card--emergency:hover { border-color: var(--red); }
+
+    /* ── TWO-COL LAYOUT ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .img-frame { border-radius: 18px; overflow: hidden; position: relative; }
+    .img-frame img { width: 100%; height: 420px; object-fit: cover; }
+    .img-badge {
+      position: absolute; bottom: 20px; left: 20px;
+      background: var(--accent); color: var(--navy);
+      font-family: 'Bebas Neue', sans-serif; font-size: .95rem;
+      letter-spacing: .08em; padding: 9px 16px; border-radius: 7px;
+    }
+    .features-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+
+    /* ── REVIEWS GRID ── */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .reviews-score {
+      text-align: center; margin-bottom: 40px;
+    }
+    .reviews-score__num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 1;
+      color: var(--accent);
+    }
+    .reviews-score__stars { font-size: 1.5rem; color: var(--accent); margin: 4px 0; letter-spacing: 3px; }
+    .reviews-score__label { font-size: .88rem; color: rgba(255,255,255,.45); }
+
+    /* ── AREAS ── */
+    .areas-chips { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin-top: 36px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid  { grid-template-columns: 1fr 1fr; }
+      .two-col { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 64px 0 140px; min-height: auto; }
+      .hero h1 { font-size: 2.8rem; }
+      .hero__stats { flex-direction: column; max-width: 100%; }
+      .hero__stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+      .hero__stat:last-child { border-bottom: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reviews-grid  { grid-template-columns: 1fr; }
+      .hero__strip-inner { gap: 16px; }
+    }
+  </style>
+</head>
+<body data-page="home">
+
+<div id="topbar" class="topbar"></div>
+<div id="navbar" class="navbar"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__accent"></div>
+  <div class="container">
+    <div class="hero__content fade-up">
+      <div class="hero__eyebrow">Gas Safe Registered Engineer</div>
+      <h1>Expert Plumbing<br>&amp; Heating
+        <em>Services</em>
+      </h1>
+      <p class="hero__sub">Trusted local plumber serving [TOWN/CITY] and surrounding areas. From emergency callouts to full boiler installations — done right, first time.</p>
+      <div class="hero__btns">
+        <a href="contact.html" class="btn btn--primary" style="font-size:.95rem;padding:15px 32px">Get a Free Quote</a>
+        <a href="tel:[PHONE]"  class="btn btn--red"     style="font-size:.95rem;padding:15px 32px">📞 Emergency Call</a>
+      </div>
+      <!-- Stats row -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">15+</span>
+          <span class="hero__stat-label">Years Experience</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">500+</span>
+          <span class="hero__stat-label">Happy Customers</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">4.9★</span>
+          <span class="hero__stat-label">Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__strip">
+    <div class="hero__strip-inner">
+      <div class="hero__badge">🛡️ Gas Safe Registered</div>
+      <div class="hero__badge">⚡ Same-Day Emergency</div>
+      <div class="hero__badge">💰 Free Quotes</div>
+      <div class="hero__badge">🔧 All Work Guaranteed</div>
+      <div class="hero__badge">🏠 Domestic &amp; Commercial</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TRUST BAR ══════════ -->
+<div class="trust">
+  <div class="container">
+    <div class="trust__inner">
+      <span class="trust__item">✅ No Call-Out Charge</span>
+      <span class="trust__item">✅ Up-Front Pricing</span>
+      <span class="trust__item">✅ Clean &amp; Tidy Workmanship</span>
+      <span class="trust__item">✅ Fully Insured &amp; Certified</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="divider"><span>Our Services</span></div>
+      <h2>What We Do</h2>
+      <p>Comprehensive plumbing and heating solutions for homes and businesses across [TOWN/CITY] and surrounding areas.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card fade-up">
+        <div class="card__icon">🔥</div>
+        <h3>Boiler Installation &amp; Repair</h3>
+        <p>Full boiler replacements, new installations, fault diagnosis and repairs. All major brands covered.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card__icon">🚿</div>
+        <h3>Bathroom Installation</h3>
+        <p>Complete bathroom refits and upgrades. Showers, baths, toilets and basins — supply, fit and finish.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card__icon">🔧</div>
+        <h3>General Plumbing</h3>
+        <p>Leaking taps, burst pipes, faulty toilets — no job too small. Fast response, honest pricing.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card__icon">🏠</div>
+        <h3>Central Heating</h3>
+        <p>Radiator replacements, power flushing, thermostats, TRVs and full system installations.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card__icon">📋</div>
+        <h3>Landlord Gas Safety Certs</h3>
+        <p>Annual CP12 inspections for landlords. Certified and issued same day where possible.</p>
+      </div>
+      <div class="card card--emergency fade-up">
+        <div class="card__icon">🚨</div>
+        <h3>24/7 Emergency Callouts</h3>
+        <p>Burst pipes, gas leaks, no heating — we're here when you need us most.</p>
+        <a href="tel:[PHONE]" style="display:inline-block;margin-top:12px;font-weight:700;color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em">Call Now: [PHONE] →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="services.html" class="btn btn--ghost">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY CHOOSE US ══════════ -->
+<section class="section section--off">
+  <div class="container">
+    <div class="two-col">
+      <div class="img-frame fade-up">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+             alt="Plumber working on central heating system in [TOWN/CITY]" loading="lazy">
+        <div class="img-badge">Gas Safe Registered</div>
+      </div>
+      <div class="fade-up">
+        <div class="eyebrow">Why Choose Us</div>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:14px">The Local Plumber You Can Actually Trust</h2>
+        <p style="margin-bottom:24px">No big call centres. No hidden fees. Just honest, reliable work from a qualified local engineer who cares about getting it right.</p>
+        <div class="features-list">
+          <div class="feature-row">
+            <div class="feature-row__icon">⚡</div>
+            <div><h4>Fast Response Times</h4><p>Same-day and emergency appointments. We understand urgency.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row__icon">💬</div>
+            <div><h4>Transparent Pricing</h4><p>Clear quote before any work starts. No surprise invoices.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row__icon">🏅</div>
+            <div><h4>Fully Qualified &amp; Insured</h4><p>Gas Safe registered, fully insured, highest standards.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row__icon">🌟</div>
+            <div><h4>5-Star Rated</h4><p>Consistently rated 4.9/5 on Google by local customers.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="about.html" class="btn btn--blue">Learn About Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ REVIEWS ══════════ -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header section-header--light fade-up">
+      <div class="divider" style="--accent:#f59e0b"><span style="color:var(--accent)">Google Reviews</span></div>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <div class="reviews-score fade-up">
+      <div class="reviews-score__num">4.9</div>
+      <div class="reviews-score__stars">★★★★★</div>
+      <div class="reviews-score__label">Based on 87 Google reviews</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__body">"Absolutely brilliant. Called in the morning with no hot water — [PLUMBER NAME] was here by lunchtime, fixed it quickly and tidied up. Will definitely use again."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">SJ</div>
+          <div>
+            <div class="review-card__name">Sarah J.</div>
+            <div class="review-card__location">[TOWN/CITY]</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__body">"Had a new boiler fitted — fair price, clean installation, no mess left behind. Explained everything clearly. Highly recommend to anyone in the area."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">MR</div>
+          <div>
+            <div class="review-card__name">Mark R.</div>
+            <div class="review-card__location">[NEARBY VILLAGE]</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__body">"Used [PLUMBER NAME] for a full bathroom refit. The quality of work was excellent and he kept me updated throughout. 100% recommend."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">LP</div>
+          <div>
+            <div class="review-card__name">Lisa P.</div>
+            <div class="review-card__location">[TOWN/CITY]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AREAS ══════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="divider"><span>Coverage</span></div>
+      <h2>Areas We Cover</h2>
+      <p>We serve [TOWN/CITY] and all surrounding towns and villages. Not sure if we cover you? Just call — we're happy to help.</p>
+    </div>
+    <div class="areas-chips fade-up">
+      <span class="area-chip">[TOWN/CITY]</span>
+      <span class="area-chip">[VILLAGE 1]</span>
+      <span class="area-chip">[VILLAGE 2]</span>
+      <span class="area-chip">[VILLAGE 3]</span>
+      <span class="area-chip">[TOWN 2]</span>
+      <span class="area-chip">[TOWN 3]</span>
+      <span class="area-chip">[TOWN 4]</span>
+      <span class="area-chip">[VILLAGE 4]</span>
+      <span class="area-chip">[TOWN 5]</span>
+      <span class="area-chip">&amp; Surrounding Areas</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<div class="cta-banner">
+  <div class="container">
+    <div class="fade-up">
+      <h2>Need a Plumber Today?</h2>
+      <p>Get in touch for fast, reliable service across [TOWN/CITY]. Free quotes, no call-out charge.</p>
+      <div class="cta-banner__btns">
+        <a href="contact.html" class="btn btn--primary" style="padding:15px 38px;font-size:.95rem">Get a Free Quote</a>
+        <a href="tel:[PHONE]"  class="btn btn--outline" style="padding:15px 38px;font-size:.95rem">📞 Call [PHONE]</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+<a href="tel:[PHONE]" class="float-call">📞 Call Now</a>
+<script src="shared.js"></script>
+</body>
+</html>

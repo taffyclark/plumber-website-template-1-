@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | [PLUMBER NAME] Plumbing &amp; Heating [TOWN/CITY]</title>
+  <meta name="description" content="Boiler installation, bathroom fitting, emergency callouts, central heating and more. [PLUMBER NAME] covers all plumbing and heating services in [TOWN/CITY].">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://[YOURDOMAIN].co.uk/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .service-block {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 56px; align-items: center; padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-block:last-of-type { border-bottom: none; }
+    .service-block--reverse { direction: rtl; }
+    .service-block--reverse > * { direction: ltr; }
+    .service-img { border-radius: 18px; overflow: hidden; }
+    .service-img img { width: 100%; height: 360px; object-fit: cover; }
+    .service-list { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .service-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-family: 'Barlow', sans-serif; font-size: .92rem; color: var(--text);
+      font-weight: 500;
+    }
+    .service-list li::before { content: '✓'; color: var(--sky); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .emergency-banner {
+      background: var(--red); border-radius: var(--radius);
+      padding: 40px 36px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap;
+      margin-top: 64px;
+    }
+    .emergency-banner h3 { font-size: 2.2rem; color: var(--white); margin-bottom: 6px; }
+    .emergency-banner p  { color: rgba(255,255,255,.8); font-size: .95rem; }
+    .faq-section { max-width: 760px; margin: 0 auto; }
+    @media (max-width: 768px) {
+      .service-block { grid-template-columns: 1fr; gap: 28px; }
+      .service-block--reverse { direction: ltr; }
+      .service-img img { height: 240px; }
+      .emergency-banner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body data-page="services">
+
+<div id="topbar" class="topbar"></div>
+<div id="navbar" class="navbar"></div>
+
+<div class="page-hero">
+  <div class="page-hero__bg"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Services</span></div>
+      <h1>Our Services</h1>
+      <p>Everything from boiler installations to emergency callouts — professional plumbing and heating services across [TOWN/CITY].</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Boiler -->
+    <div class="service-block fade-up">
+      <div>
+        <div class="eyebrow">Heating</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin-bottom:12px">Boiler Installation &amp; Repair</h2>
+        <p style="margin-bottom:8px">Whether you need a brand-new boiler or your existing one needs fixing, we have you covered. As Worcester Bosch accredited installers, we fit and service all leading brands.</p>
+        <ul class="service-list">
+          <li>New boiler installation (all major brands)</li>
+          <li>Boiler replacement and upgrades</li>
+          <li>Annual boiler servicing</li>
+          <li>Fault diagnosis and repair</li>
+          <li>Gas safety checks</li>
+          <li>Flue and ventilation work</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Get a Boiler Quote</a>
+      </div>
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
+             alt="Boiler installation in [TOWN/CITY]" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Bathroom -->
+    <div class="service-block service-block--reverse fade-up">
+      <div>
+        <div class="eyebrow">Bathrooms</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin-bottom:12px">Bathroom Installation &amp; Refits</h2>
+        <p style="margin-bottom:8px">From a simple suite swap to a full bathroom transformation, we handle the plumbing and fitting from start to finish.</p>
+        <ul class="service-list">
+          <li>Full bathroom design and refit</li>
+          <li>Shower and bath installation</li>
+          <li>Toilet and basin fitting</li>
+          <li>Underfloor heating</li>
+          <li>Tiling and sealing</li>
+          <li>En-suite conversions</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Get a Bathroom Quote</a>
+      </div>
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80"
+             alt="Bathroom installation in [TOWN/CITY]" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Central Heating -->
+    <div class="service-block fade-up">
+      <div>
+        <div class="eyebrow">Heating Systems</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin-bottom:12px">Central Heating</h2>
+        <p style="margin-bottom:8px">Keep your home warm and energy-efficient. We install, repair and maintain complete central heating systems.</p>
+        <ul class="service-list">
+          <li>Full central heating installation</li>
+          <li>Radiator replacement and balancing</li>
+          <li>Power flushing</li>
+          <li>Thermostats and smart controls</li>
+          <li>TRV (thermostatic radiator valve) fitting</li>
+          <li>Pump and valve replacement</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Get a Heating Quote</a>
+      </div>
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80"
+             alt="Central heating installation" loading="lazy">
+      </div>
+    </div>
+
+    <!-- General Plumbing -->
+    <div class="service-block service-block--reverse fade-up">
+      <div>
+        <div class="eyebrow">Plumbing</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin-bottom:12px">General Plumbing Repairs</h2>
+        <p style="margin-bottom:8px">No job is too small. We tackle everything from a leaking tap to a burst pipe, quickly and affordably.</p>
+        <ul class="service-list">
+          <li>Leaking taps and pipes</li>
+          <li>Burst pipe repair</li>
+          <li>Toilet repairs and replacements</li>
+          <li>Low water pressure</li>
+          <li>Blocked drains and waste pipes</li>
+          <li>Stopcock and valve replacement</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Get a Plumbing Quote</a>
+      </div>
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+             alt="Plumbing repair in [TOWN/CITY]" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Landlord Certs -->
+    <div class="service-block fade-up">
+      <div>
+        <div class="eyebrow">Landlords</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--navy);margin-bottom:12px">Landlord Gas Safety Certificates</h2>
+        <p style="margin-bottom:8px">All rental properties must have an annual gas safety check. We make it easy — quick booking, same-day certificates where possible.</p>
+        <ul class="service-list">
+          <li>Annual CP12 gas safety inspection</li>
+          <li>Certificate issued same day</li>
+          <li>Reminder service available</li>
+          <li>Works across multiple properties</li>
+          <li>Fast turnaround for letting agents</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Book a Gas Safety Check</a>
+      </div>
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80"
+             alt="Gas safety certificate inspection" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner fade-up">
+      <div>
+        <h3>🚨 24/7 Emergency Callouts</h3>
+        <p>Burst pipe? No heating? Gas leak? We respond fast — day or night, weekends included.</p>
+      </div>
+      <a href="tel:[PHONE]" class="btn" style="background:var(--white);color:var(--red);font-size:1rem;padding:15px 36px;flex-shrink:0">
+        📞 Call [PHONE] Now
+      </a>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:72px">
+      <div class="section-header fade-up">
+        <div class="divider"><span>FAQ</span></div>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-section">
+        <div class="faq-item fade-up">
+          <button class="faq-question">Do you offer free quotes? <span class="faq-chevron">▼</span></button>
+          <div class="faq-answer"><p>Yes — all quotes are completely free and no-obligation. We'll assess the job, give you a clear upfront price, and won't start until you're happy.</p></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question">Are you Gas Safe registered? <span class="faq-chevron">▼</span></button>
+          <div class="faq-answer"><p>Yes. All gas work is carried out by a fully qualified Gas Safe registered engineer. You can verify our registration at gassaferegister.co.uk.</p></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question">How quickly can you attend an emergency? <span class="faq-chevron">▼</span></button>
+          <div class="faq-answer"><p>We aim to attend as quickly as possible — often same day. For burst pipes, gas leaks or total heating failure, call us immediately and we'll prioritise your job.</p></div>
+        </div>
+        <div class="faq-item fade-up">
+          <button class="faq-question">Is your work guaranteed? <span class="faq-chevron">▼</span></button>
+          <div class="faq-answer"><p>Absolutely. All workmanship is fully guaranteed. If you have any concerns after a job is completed, we'll return to resolve it — no quibble, no charge.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <div class="fade-up">
+      <h2>Get a Free Quote Today</h2>
+      <p>Tell us what you need and we'll get back to you promptly with a clear, honest price.</p>
+      <div class="cta-banner__btns">
+        <a href="contact.html" class="btn btn--primary" style="padding:15px 38px;font-size:.95rem">Request a Quote</a>
+        <a href="tel:[PHONE]"  class="btn btn--outline" style="padding:15px 38px;font-size:.95rem">📞 Call [PHONE]</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+<a href="tel:[PHONE]" class="float-call">📞 Call Now</a>
+<script src="shared.js"></script>
+</body>
+</html>

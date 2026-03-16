@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | [PLUMBER NAME] Plumbing &amp; Heating [TOWN/CITY]</title>
+  <meta name="description" content="Contact [PLUMBER NAME] for a free plumbing or heating quote in [TOWN/CITY]. Call [PHONE] or fill in our quick enquiry form.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://[YOURDOMAIN].co.uk/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      gap: 52px; align-items: start;
+    }
+    .contact-info-stack { display: flex; flex-direction: column; gap: 14px; }
+    .contact-map {
+      margin-top: 20px; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); height: 220px; background: var(--off);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .88rem; font-weight: 600;
+      text-align: center;
+    }
+    /* Success message */
+    .form-success {
+      display: none; text-align: center; padding: 40px 24px;
+    }
+    .form-success.show { display: block; }
+    .form-success__icon { font-size: 3rem; margin-bottom: 12px; }
+    .form-success h3 { font-size: 2rem; color: var(--navy); margin-bottom: 8px; }
+    .form-success p  { font-size: .95rem; }
+    /* Hours table */
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+    .hours-table td {
+      padding: 5px 0; font-family: 'Barlow', sans-serif;
+      font-size: .88rem; color: var(--muted);
+    }
+    .hours-table td:first-child { font-weight: 700; color: var(--text); }
+    .hours-table td:last-child  { text-align: right; }
+    @media (max-width: 820px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="contact">
+
+<div id="topbar" class="topbar"></div>
+<div id="navbar" class="navbar"></div>
+
+<div class="page-hero">
+  <div class="page-hero__bg"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></div>
+      <h1>Get In Touch</h1>
+      <p>Free quotes, no obligation. Fill in the form or call us directly — we aim to respond the same day.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Left: Info -->
+      <div class="fade-up">
+        <div class="eyebrow">Contact Details</div>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem);color:var(--navy);margin-bottom:20px">We'd Love to Hear From You</h2>
+        <p style="margin-bottom:24px">Whether you need an emergency callout or want to plan a bathroom refit, get in touch and we'll give you a clear, honest quote.</p>
+
+        <div class="contact-info-stack">
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📞</div>
+            <div>
+              <div class="contact-info-item__label">Phone</div>
+              <div class="contact-info-item__value"><a href="tel:[PHONE]">[PHONE]</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📧</div>
+            <div>
+              <div class="contact-info-item__label">Email</div>
+              <div class="contact-info-item__value"><a href="mailto:[EMAIL]">[EMAIL]</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <div class="contact-info-item__label">Service Area</div>
+              <div class="contact-info-item__value">[TOWN/CITY] &amp; Surrounding Areas</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🕐</div>
+            <div>
+              <div class="contact-info-item__label">Opening Hours</div>
+              <div class="contact-info-item__value" style="font-size:.9rem;font-weight:500">
+                <table class="hours-table">
+                  <tr><td>Monday – Friday</td><td>7:00am – 6:00pm</td></tr>
+                  <tr><td>Saturday</td><td>8:00am – 4:00pm</td></tr>
+                  <tr><td>Sunday</td><td>Emergency only</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item" style="background:var(--red)">
+            <div class="contact-info-item__icon" style="background:rgba(255,255,255,.2)">🚨</div>
+            <div>
+              <div class="contact-info-item__label" style="color:rgba(255,255,255,.7)">24/7 Emergency Line</div>
+              <div class="contact-info-item__value" style="color:var(--white)">
+                <a href="tel:[PHONE]" style="color:var(--white)">[PHONE]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map placeholder — replace with real Google Maps embed -->
+        <div class="contact-map">
+          📍 [TOWN/CITY]<br>
+          <small style="font-weight:400;color:var(--muted);margin-top:4px;display:block">
+            Replace this box with a Google Maps embed
+          </small>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="fade-up">
+        <div class="contact-form">
+          <h3>Request a Free Quote</h3>
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">✅</div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for getting in touch. We'll get back to you within a few hours during working hours.</p>
+          </div>
+
+          <!-- Form -->
+          <form id="quoteForm" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="first_name" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="07700 000000" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>Boiler Installation / Replacement</option>
+                <option>Boiler Repair / Service</option>
+                <option>Emergency Callout</option>
+                <option>Bathroom Installation / Refit</option>
+                <option>General Plumbing Repair</option>
+                <option>Central Heating</option>
+                <option>Landlord Gas Safety Certificate</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="postcode">Postcode</label>
+              <input type="text" id="postcode" name="postcode" placeholder="e.g. LN11 0AA">
+            </div>
+            <div class="form-group">
+              <label for="message">Describe the Job *</label>
+              <textarea id="message" name="message"
+                placeholder="Please describe what you need — as much detail as you can. We'll come back to you with a clear, honest quote." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit">
+              Send My Request →
+            </button>
+            <p style="font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center">
+              We respond within a few hours during working hours. Your details are kept private.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <div class="fade-up">
+      <h2>Prefer to Call?</h2>
+      <p>We're always happy to talk through a job over the phone. No pressure, no obligation.</p>
+      <div class="cta-banner__btns">
+        <a href="tel:[PHONE]" class="btn btn--primary" style="padding:15px 38px;font-size:.95rem">📞 Call [PHONE]</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+<a href="tel:[PHONE]" class="float-call">📞 Call Now</a>
+<script src="shared.js"></script>
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('quoteForm');
+    const success = document.getElementById('formSuccess');
+    // In production, wire this up to Formspree, Netlify Forms, or your email service.
+    // For now it just shows a success message.
+    form.style.display = 'none';
+    success.classList.add('show');
+  }
+</script>
+</body>
+</html>

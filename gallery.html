@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | [PLUMBER NAME] Plumbing &amp; Heating</title>
+  <meta name="description" content="View photos of completed plumbing and heating projects by [PLUMBER NAME] across [TOWN/CITY] — boiler installations, bathroom refits, heating systems and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://[YOURDOMAIN].co.uk/gallery.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Filter tabs */
+    .filter-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 36px;
+    }
+    .filter-btn {
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .1em;
+      padding: 8px 20px; border-radius: 999px;
+      border: 2px solid var(--border); background: var(--white);
+      color: var(--muted); cursor: pointer; transition: all .15s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--sky); border-color: var(--sky); color: var(--white);
+    }
+    /* Gallery items hidden by filter */
+    .gallery-item[data-hidden="true"] { display: none; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,.92);
+      align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 85vh;
+      border-radius: var(--radius); object-fit: contain;
+    }
+    .lightbox__close {
+      position: absolute; top: 20px; right: 24px;
+      font-size: 2rem; color: rgba(255,255,255,.7);
+      background: none; border: none; cursor: pointer; line-height: 1;
+    }
+    .lightbox__close:hover { color: var(--white); }
+    .lightbox__caption {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: rgba(0,0,0,.6); color: var(--white);
+      font-family: 'Barlow', sans-serif; font-weight: 700; font-size: .85rem;
+      padding: 8px 18px; border-radius: 999px; white-space: nowrap;
+    }
+  </style>
+</head>
+<body data-page="gallery">
+
+<div id="topbar" class="topbar"></div>
+<div id="navbar" class="navbar"></div>
+
+<div class="page-hero">
+  <div class="page-hero__bg"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <div class="page-hero__breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></div>
+      <h1>Our Work</h1>
+      <p>A selection of completed plumbing, heating and bathroom projects across [TOWN/CITY] and surrounding areas. Click any image to enlarge.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Filter tabs -->
+    <div class="filter-tabs fade-up">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Work</button>
+      <button class="filter-btn" onclick="filterGallery('boiler', this)">Boilers</button>
+      <button class="filter-btn" onclick="filterGallery('bathroom', this)">Bathrooms</button>
+      <button class="filter-btn" onclick="filterGallery('heating', this)">Central Heating</button>
+      <button class="filter-btn" onclick="filterGallery('plumbing', this)">Plumbing</button>
+    </div>
+
+    <!-- Gallery grid -->
+    <!-- HOW TO ADD YOUR OWN PHOTOS:
+         Replace each src="https://images.unsplash.com/..." with the path to your client's photo.
+         Example: src="images/boiler-install-1.jpg"
+         Keep the data-category and data-label attributes as-is. -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item fade-up" data-category="boiler" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+             alt="Boiler installation [TOWN/CITY]" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Boiler Installation</span></div>
+        <span style="display:none">Boiler Installation</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80"
+             alt="Bathroom refit [TOWN/CITY]" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Bathroom Refit</span></div>
+        <span style="display:none">Bathroom Refit</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="heating" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=600&q=80"
+             alt="Central heating system" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Central Heating System</span></div>
+        <span style="display:none">Central Heating System</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="plumbing" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80"
+             alt="Pipe repair" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Pipe Repair</span></div>
+        <span style="display:none">Pipe Repair</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=600&q=80"
+             alt="Shower installation" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Shower Installation</span></div>
+        <span style="display:none">Shower Installation</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="boiler" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80"
+             alt="Boiler service" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Boiler Service</span></div>
+        <span style="display:none">Boiler Service</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="heating" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+             alt="Radiator installation" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Radiator Installation</span></div>
+        <span style="display:none">Radiator Installation</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80"
+             alt="En-suite bathroom" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">En-Suite Bathroom</span></div>
+        <span style="display:none">En-Suite Bathroom</span>
+      </div>
+
+      <div class="gallery-item fade-up" data-category="plumbing" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+             alt="Kitchen plumbing" loading="lazy">
+        <div class="gallery-item__overlay"><span class="gallery-item__label">Kitchen Plumbing</span></div>
+        <span style="display:none">Kitchen Plumbing</span>
+      </div>
+
+    </div>
+    <!-- ADD MORE IMAGES: Copy and paste a gallery-item div above, change src, alt, data-category and the label text -->
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox__caption" id="lightboxCaption"></div>
+</div>
+
+<div class="cta-banner">
+  <div class="container">
+    <div class="fade-up">
+      <h2>Like What You See?</h2>
+      <p>Get in touch for a free quote on your project. We serve [TOWN/CITY] and all surrounding areas.</p>
+      <div class="cta-banner__btns">
+        <a href="contact.html" class="btn btn--primary" style="padding:15px 38px;font-size:.95rem">Get a Free Quote</a>
+        <a href="tel:[PHONE]"  class="btn btn--outline" style="padding:15px 38px;font-size:.95rem">📞 Call [PHONE]</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+<a href="tel:[PHONE]" class="float-call">📞 Call Now</a>
+<script src="shared.js"></script>
+<script>
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.dataset.hidden = (cat !== 'all' && item.dataset.category !== cat) ? 'true' : 'false';
+    });
+  }
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    const label = item.querySelector('span:last-child').textContent;
+    document.getElementById('lightboxImg').src = img.src.replace('w=600', 'w=1200');
+    document.getElementById('lightboxImg').alt = img.alt;
+    document.getElementById('lightboxCaption').textContent = label;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox(e) {
+    if (!e || e.target !== document.getElementById('lightboxImg')) {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
