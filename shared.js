@@ -2,14 +2,14 @@
 
 /* ── CONFIG: update these for each client ── */
 const SITE = {
-  name:    "[PLUMBER NAME]",
+  name:    "Redwolf Plumbing & Heating",
   tagline: "Plumbing · Heating · Gas",
-  phone:   "[PHONE]",
-  email:   "[EMAIL]",
-  town:    "[TOWN/CITY]",
-  fb:      "https://facebook.com/[PAGE]",
-  google:  "https://maps.google.com/maps?q=[BUSINESS]",
-  checka:  "https://www.checkatrade.com/trades/[PROFILE]",
+  phone:   "07951 951673",
+  email:   "redwolf_plumbing@outlook.com",
+  town:    "Newcastle upon Tyne",
+  fb:      "https://facebook.com/redwolfplumbing",
+  google:  "https://maps.google.com/maps?q=Redwolf+Plumbing+Heating+Newcastle",
+  checka:  "https://www.checkatrade.com/trades/RedwolfPlumbing",
   gasNo:   "[GAS SAFE NUMBER]",
   year:    new Date().getFullYear()
 };
