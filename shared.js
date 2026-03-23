@@ -2,14 +2,14 @@
 
 /* ── CONFIG: update these for each client ── */
 const SITE = {
-  name:    "AAA Plumbing & Maintenance",
-  tagline: "Plumbing · Heating · Property Maintenance",
-  phone:   "07709 502666",
-  email:   "aaaplumbingandmaintenance@gmail.com",
-  town:    "Winchester",
-  fb:      "https://www.facebook.com/AAA-Plumbing-Maintenance-744751145570758/",
-  google:  "https://maps.google.com/maps?q=AAA+Plumbing+Maintenance+Winchester",
-  checka:  "https://nextdoor.co.uk/pages/aaa-plumbing-and-maintenance-southampton-gb-eng/",
+  name:    "Plumbwise",
+  tagline: "Plumbing · Heating · Multi-Trade",
+  phone:   "07304 303493",
+  email:   "info@plumbwise-carlisle.co.uk",
+  town:    "Carlisle",
+  fb:      "https://facebook.com/plumbwisecarlisle",
+  google:  "https://maps.google.com/maps?q=Plumbwise+Carlisle+CA1+2LH",
+  checka:  "https://www.checkatrade.com/trades/plumbwise15001977",
   gasNo:   "[GAS SAFE NUMBER]",
   year:    new Date().getFullYear()
 };
@@ -26,7 +26,7 @@ function injectTopbar() {
         </div>
         <div class="topbar__right">
           <span class="topbar__badge">🛡️ Gas Safe Registered</span>
-          <span class="topbar__badge">✅ 12 Years Experience</span>
+          <span class="topbar__badge">✅ Checkatrade Listed</span>
           <a href="tel:${SITE.phone}">📞 ${SITE.phone}</a>
         </div>
       </div>
@@ -85,11 +85,11 @@ function injectFooter() {
       <div class="footer__grid">
         <div>
           <div class="footer__logo">${SITE.name}</div>
-          <p class="footer__desc">Professional plumber and property maintenance specialist with 12 years experience, serving Winchester, Southampton and surrounding Hampshire areas. Quality workmanship, transparent pricing, and genuine care for every customer.</p>
+          <p class="footer__desc">Reliable, multi-trade plumbing and heating business based in Carlisle, serving the city and surrounding Cumbrian areas. Quality workmanship, transparent pricing, and genuine care for every customer.</p>
           <div class="footer__social">
             <a href="${SITE.fb}"     class="social-btn" aria-label="Facebook">f</a>
             <a href="${SITE.google}" class="social-btn" aria-label="Google">G</a>
-            <a href="${SITE.checka}" class="social-btn" aria-label="Nextdoor">N</a>
+            <a href="${SITE.checka}" class="social-btn" aria-label="Checkatrade">C</a>
           </div>
         </div>
         <div>
@@ -106,18 +106,17 @@ function injectFooter() {
           <div class="footer__col-title">Services</div>
           <div class="footer__links">
             <a href="services.html">Boiler Installation</a>
+            <a href="services.html">Boiler Repairs</a>
             <a href="services.html">Bathroom Fitting</a>
-            <a href="services.html">General Plumbing</a>
-            <a href="services.html">Tiling & Plastering</a>
-            <a href="services.html">Property Maintenance</a>
+            <a href="services.html">Blocked Drains</a>
+            <a href="services.html">Water Leak Detection</a>
             <a href="services.html">Emergency Callouts</a>
           </div>
         </div>
         <div>
           <div class="footer__col-title">Contact Us</div>
           <div class="footer__contact-row">📞 <div><strong><a href="tel:${SITE.phone}">${SITE.phone}</a></strong></div></div>
-          <div class="footer__contact-row">📧 <div><strong><a href="mailto:${SITE.email}">${SITE.email}</a></strong></div></div>
-          <div class="footer__contact-row">📍 <div><span>Winchester &amp; Southampton, Hampshire</span></div></div>
+          <div class="footer__contact-row">📍 <div><span>29 Alexander Street, Carlisle, CA1 2LH</span></div></div>
           <div class="footer__contact-row">🕐 <div><span>Mon–Fri 7am–6pm<br>Sat 8am–4pm</span></div></div>
           <div style="margin-top:14px">
             <a href="tel:${SITE.phone}" class="btn btn--red" style="font-size:.8rem;padding:10px 18px">🚨 24/7 Emergency</a>
